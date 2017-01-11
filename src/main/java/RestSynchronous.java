@@ -31,13 +31,7 @@ public class RestSynchronous {
             System.out.println("Estado del codigo: " + response.code() + "Mensaje de error: "+ response.errorBody());
         }
 
-        Call<List<Atleta>> callUrlError = atletaService.getError();
-        response = callUrlError.execute();
 
-        if(!response.isSuccessful()){
-            System.out.println("Estado del codigo: "+response.code() + "Mensaje de Error: "+ response.code());
-
-        }
 
         Call<Atleta> callAtleta = atletaService.getAtleta(2L);
         Response<Atleta> responseAtleta = callAtleta.execute();
