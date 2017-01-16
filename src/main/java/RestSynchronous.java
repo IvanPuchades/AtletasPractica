@@ -3,8 +3,8 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import javax.print.AttributeException;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -30,6 +30,29 @@ public class RestSynchronous {
         }else{
             System.out.println("Estado del codigo: " + response.code() + "Mensaje de error: "+ response.errorBody());
         }
+
+        //Creamos un atleta nuevo y lo mostramos
+        Atleta atleta = new Atleta("Oskar", "Rodriguez", "española", LocalDate.of(1995, 12, 5));
+        Response<Atleta> createAtleta = atletaService.createAtleta(atleta).execute();
+        Atleta responseCreateAtleta = null;
+        if (createAtleta.isSuccessful()){
+            //hacemos el update del atleta creado
+            responseCreateAtleta = createAtleta.body();
+            responseCreateAtleta.setNombre("Nombre cambiado");
+            System.out.println("Estado del codigo: "+createAtleta.code()+" Atleta: "+createAtleta.body());
+            Response<Atleta> updateAtleta = atletaService.updateAtleta(responseCreateAtleta).execute();
+            if (updateAtleta.isSuccessful()){
+                System.out.println("Estado del codigo: "+updateAtleta.body());
+                System.out.println("Atleta "+updateAtleta.body()+" Modificado con exito ");
+            }
+
+        }else {
+            System.out.println("Estado del codigo: "+createAtleta.code()+ "Mensaje de error: "+createAtleta.errorBody());
+        }
+
+
+
+
 
 
 
