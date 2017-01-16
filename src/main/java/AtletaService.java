@@ -10,7 +10,7 @@ public interface AtletaService {
     @GET("/atletas")
     Call<List<Atleta>> getAllAtleta();
 
-    @GET("/atletas{id}")
+    @GET("/atletas/{id}")
     Call<Atleta> getAtleta(@Path("id") Long id);
 
     @GET("/atletaError")
