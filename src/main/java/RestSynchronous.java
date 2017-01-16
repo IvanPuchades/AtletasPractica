@@ -44,20 +44,19 @@ public class RestSynchronous {
             if (updateAtleta.isSuccessful()){
                 System.out.println("Estado del codigo: "+updateAtleta.body());
                 System.out.println("Atleta "+updateAtleta.body()+" Modificado con exito ");
+                Response<Atleta> deleteAtleta = atletaService.deleteAtleta(updateAtleta).execute();
             }
+
+
 
         }else {
             System.out.println("Estado del codigo: "+createAtleta.code()+ "Mensaje de error: "+createAtleta.errorBody());
         }
 
-
-
-
-
-
-
         Call<Atleta> callAtleta = atletaService.getAtleta(2L);
         Response<Atleta> responseAtleta = callAtleta.execute();
+
+
 
         if(responseAtleta.isSuccessful()){
             System.out.println("Estado del codigo: "+responseAtleta.code()+ " Atleta: "+responseAtleta.body());
