@@ -1,0 +1,120 @@
+GET /atletas HTTP/1.1
+Host: 192.168.32.29:8080
+Connection: Keep-Alive
+Accept-Encoding: gzip
+User-Agent: okhttp/3.3.0
+
+HTTP/1.1 200 
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Wed, 18 Jan 2017 14:42:58 GMT
+
+[{"id":1,"nombre":"Ivan","apellido":"Puchades","nacionalidad":"Espa..ola"},{"id":2,"nombre":"ChaoJun","apellido":"Chao","nacionalidad":"China"},{"id":3,"nombre":"Raul","apellido":"Vazquez","nacionalidad":"Italiano"},{"id":4,"nombre":"Ivan","apellido":"Puchades","nacionalidad":"Espa..ola"},{"id":5,"nombre":"ChaoJun","apellido":"Chao","nacionalidad":"China"},{"id":6,"nombre":"Raul","apellido":"Vazquez","nacionalidad":"Italiano"},{"id":7,"nombre":"Oskar","apellido":"Rodriguez","nacionalidad":"espa..ola"},{"id":8,"nombre":"Oskar","apellido":"Rodriguez","nacionalidad":"espa..ola"},{"id":9,"nombre":"Oskar","apellido":"Rodriguez","nacionalidad":"espa..ola"},{"id":10,"nombre":"Oskar","apellido":"Rodriguez","nacionalidad":"espa..ola"},{"id":11,"nombre":"Oskar","apellido":"Rodriguez","nacionalidad":"espa..ola"},{"id":12,"nombre":"Oskar","apellido":"Rodriguez","nacionalidad":"espa..ola"},{"id":13,"nombre":"Oskar","apellido":"Rodriguez","nacionalidad":"espa..ola"},{"id":14,"nombre":"Ivan","apellido":"Puchades","nacionalidad":"Espa..ola"},{"id":15,"nombre":"ChaoJun","apellido":"Chao","nacionalidad":"China"},{"id":16,"nombre":"Raul","apellido":"Vazquez","nacionalidad":"Italiano"},{"id":17,"nombre":"Oskar","apellido":"Rodriguez","nacionalidad":"espa..ola"},{"id":18,"nombre":"Oskar","apellido":"Rodriguez","nacionalidad":"espa..ola"},{"id":19,"nombre":"Nombre cambiado","apellido":"Rodriguez","nacionalidad":"espa..ola"},{"id":20,"nombre":"Ivan","apellido":"Puchades","nacionalidad":"Espa..ola"},{"id":21,"nombre":"ChaoJun","apellido":"Chao","nacionalidad":"China"},{"id":22,"nombre":"Raul","apellido":"Vazquez","nacionalidad":"Italiano"},{"id":23,"nombre":"Nombre cambiado","apellido":"Rodriguez","nacionalidad":"espa..ola"},{"id":24,"nombre":"Nombre cambiado","apellido":"Rodriguez","nacionalidad":"espa..ola"},{"id":25,"nombre":"Ivan","apellido":"Puchades","nacionalidad":"Espa..ola"},{"id":26,"nombre":"ChaoJun","apellido":"Chao","nacionalidad":"China"},{"id":27,"nombre":"Raul","apellido":"Vazquez","nacionalidad":"Italiano"}]
+
+
+POST /atletas HTTP/1.1
+Content-Type: application/json; charset=UTF-8
+Content-Length: 126
+Host: 192.168.32.29:8080
+Connection: Keep-Alive
+Accept-Encoding: gzip
+User-Agent: okhttp/3.3.0
+
+{"id":0,"nombre":"Oskar","apellido":"Rodriguez","nacionalidad":"espa..ola","fechaNacimiento":{"year":1995,"month":12,"day":5}}HTTP/1.1 201 
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Wed, 18 Jan 2017 14:42:58 GMT
+
+{"id":30,"nombre":"Oskar","apellido":"Rodriguez","nacionalidad":"espa..ola"}PUT /atletas HTTP/1.1
+Content-Type: application/json; charset=UTF-8
+Content-Length: 86
+Host: 192.168.32.29:8080
+Connection: Keep-Alive
+Accept-Encoding: gzip
+User-Agent: okhttp/3.3.0
+
+{"id":30,"nombre":"Nombre cambiado","apellido":"Rodriguez","nacionalidad":"espa..ola"}HTTP/1.1 200 
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Wed, 18 Jan 2017 14:42:58 GMT
+
+{"id":30,"nombre":"Nombre cambiado","apellido":"Rodriguez","nacionalidad":"espa..ola"}DELETE /atletas/30 HTTP/1.1
+Host: 192.168.32.29:8080
+Connection: Keep-Alive
+Accept-Encoding: gzip
+User-Agent: okhttp/3.3.0
+
+HTTP/1.1 200 
+Content-Length: 0
+Date: Wed, 18 Jan 2017 14:42:58 GMT
+
+GET /atletas/2 HTTP/1.1
+Host: 192.168.32.29:8080
+Connection: Keep-Alive
+Accept-Encoding: gzip
+User-Agent: okhttp/3.3.0
+
+HTTP/1.1 200 
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Wed, 18 Jan 2017 14:42:58 GMT
+
+{"id":2,"nombre":"ChaoJun","apellido":"Chao","nacionalidad":"China"}GET /atletas HTTP/1.1
+Host: 192.168.32.29:8080
+Connection: Keep-Alive
+Accept-Encoding: gzip
+User-Agent: okhttp/3.3.0
+
+HTTP/1.1 200 
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Wed, 18 Jan 2017 14:42:58 GMT
+
+[{"id":1,"nombre":"Ivan","apellido":"Puchades","nacionalidad":"Espa..ola"},{"id":2,"nombre":"ChaoJun","apellido":"Chao","nacionalidad":"China"},{"id":3,"nombre":"Raul","apellido":"Vazquez","nacionalidad":"Italiano"},{"id":4,"nombre":"Ivan","apellido":"Puchades","nacionalidad":"Espa..ola"},{"id":5,"nombre":"ChaoJun","apellido":"Chao","nacionalidad":"China"},{"id":6,"nombre":"Raul","apellido":"Vazquez","nacionalidad":"Italiano"},{"id":7,"nombre":"Oskar","apellido":"Rodriguez","nacionalidad":"espa..ola"},{"id":8,"nombre":"Oskar","apellido":"Rodriguez","nacionalidad":"espa..ola"},{"id":9,"nombre":"Oskar","apellido":"Rodriguez","nacionalidad":"espa..ola"},{"id":10,"nombre":"Oskar","apellido":"Rodriguez","nacionalidad":"espa..ola"},{"id":11,"nombre":"Oskar","apellido":"Rodriguez","nacionalidad":"espa..ola"},{"id":12,"nombre":"Oskar","apellido":"Rodriguez","nacionalidad":"espa..ola"},{"id":13,"nombre":"Oskar","apellido":"Rodriguez","nacionalidad":"espa..ola"},{"id":14,"nombre":"Ivan","apellido":"Puchades","nacionalidad":"Espa..ola"},{"id":15,"nombre":"ChaoJun","apellido":"Chao","nacionalidad":"China"},{"id":16,"nombre":"Raul","apellido":"Vazquez","nacionalidad":"Italiano"},{"id":17,"nombre":"Oskar","apellido":"Rodriguez","nacionalidad":"espa..ola"},{"id":18,"nombre":"Oskar","apellido":"Rodriguez","nacionalidad":"espa..ola"},{"id":19,"nombre":"Nombre cambiado","apellido":"Rodriguez","nacionalidad":"espa..ola"},{"id":20,"nombre":"Ivan","apellido":"Puchades","nacionalidad":"Espa..ola"},{"id":21,"nombre":"ChaoJun","apellido":"Chao","nacionalidad":"China"},{"id":22,"nombre":"Raul","apellido":"Vazquez","nacionalidad":"Italiano"},{"id":23,"nombre":"Nombre cambiado","apellido":"Rodriguez","nacionalidad":"espa..ola"},{"id":24,"nombre":"Nombre cambiado","apellido":"Rodriguez","nacionalidad":"espa..ola"},{"id":25,"nombre":"Ivan","apellido":"Puchades","nacionalidad":"Espa..ola"},{"id":26,"nombre":"ChaoJun","apellido":"Chao","nacionalidad":"China"},{"id":27,"nombre":"Raul","apellido":"Vazquez","nacionalidad":"Italiano"}]POST /atletas HTTP/1.1
+Content-Type: application/json; charset=UTF-8
+Content-Length: 126
+Host: 192.168.32.29:8080
+Connection: Keep-Alive
+Accept-Encoding: gzip
+User-Agent: okhttp/3.3.0
+
+{"id":0,"nombre":"Oskar","apellido":"Rodriguez","nacionalidad":"espa..ola","fechaNacimiento":{"year":1995,"month":12,"day":5}}HTTP/1.1 201 
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Wed, 18 Jan 2017 14:42:58 GMT
+
+{"id":30,"nombre":"Oskar","apellido":"Rodriguez","nacionalidad":"espa..ola"}PUT /atletas HTTP/1.1
+Content-Type: application/json; charset=UTF-8
+Content-Length: 86
+Host: 192.168.32.29:8080
+Connection: Keep-Alive
+Accept-Encoding: gzip
+User-Agent: okhttp/3.3.0
+
+{"id":30,"nombre":"Nombre cambiado","apellido":"Rodriguez","nacionalidad":"espa..ola"}HTTP/1.1 200 
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Wed, 18 Jan 2017 14:42:58 GMT
+
+{"id":30,"nombre":"Nombre cambiado","apellido":"Rodriguez","nacionalidad":"espa..ola"}DELETE /atletas/30 HTTP/1.1
+Host: 192.168.32.29:8080
+Connection: Keep-Alive
+Accept-Encoding: gzip
+User-Agent: okhttp/3.3.0
+
+HTTP/1.1 200 
+Content-Length: 0
+Date: Wed, 18 Jan 2017 14:42:58 GMT
+
+GET /atletas/2 HTTP/1.1
+Host: 192.168.32.29:8080
+Connection: Keep-Alive
+Accept-Encoding: gzip
+User-Agent: okhttp/3.3.0
+
+HTTP/1.1 200 
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Wed, 18 Jan 2017 14:42:58 GMT
+
+{"id":2,"nombre":"ChaoJun","apellido":"Chao","nacionalidad":"China"}
