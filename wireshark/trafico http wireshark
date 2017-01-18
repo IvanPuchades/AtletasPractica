@@ -25,7 +25,10 @@ Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
 Date: Wed, 18 Jan 2017 14:42:58 GMT
 
-{"id":30,"nombre":"Oskar","apellido":"Rodriguez","nacionalidad":"espa..ola"}PUT /atletas HTTP/1.1
+{"id":30,"nombre":"Oskar","apellido":"Rodriguez","nacionalidad":"espa..ola"}
+
+
+PUT /atletas HTTP/1.1
 Content-Type: application/json; charset=UTF-8
 Content-Length: 86
 Host: 192.168.32.29:8080
@@ -38,7 +41,10 @@ Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
 Date: Wed, 18 Jan 2017 14:42:58 GMT
 
-{"id":30,"nombre":"Nombre cambiado","apellido":"Rodriguez","nacionalidad":"espa..ola"}DELETE /atletas/30 HTTP/1.1
+{"id":30,"nombre":"Nombre cambiado","apellido":"Rodriguez","nacionalidad":"espa..ola"}
+
+
+DELETE /atletas/30 HTTP/1.1
 Host: 192.168.32.29:8080
 Connection: Keep-Alive
 Accept-Encoding: gzip
