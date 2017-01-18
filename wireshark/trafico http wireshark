@@ -65,7 +65,10 @@ Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
 Date: Wed, 18 Jan 2017 14:42:58 GMT
 
-{"id":2,"nombre":"ChaoJun","apellido":"Chao","nacionalidad":"China"}GET /atletas HTTP/1.1
+{"id":2,"nombre":"ChaoJun","apellido":"Chao","nacionalidad":"China"}
+
+
+GET /atletas HTTP/1.1
 Host: 192.168.32.29:8080
 Connection: Keep-Alive
 Accept-Encoding: gzip
